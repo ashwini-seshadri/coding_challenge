@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<style>
+    .tooltip {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        pointer-events: none;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 12px;
+    }
+</style>
+<html>
+<head>
+    <title>Cumulative emissions over the years!</title>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="/script.js"></script>
+</head>
+<body>
+<h1>Cumulative emissions over the years!</h1>
+<div>
+    <fieldset>
+        <legend>Select a level of ambition:</legend>
+
+        <div>
+            <input type="radio" id="level1" name="levelOfAmbition" value="1"
+                   checked>
+            <label for="level1">Level 1</label>
+        </div>
+
+        <div>
+            <input type="radio" id="level2" name="levelOfAmbition" value="2">
+            <label for="level2">Level 2</label>
+        </div>
+
+        <div>
+            <input type="radio" id="level3" name="levelOfAmbition" value="3">
+            <label for="level3">Level 3</label>
+        </div>
+
+        <div>
+            <input type="radio" id="level4" name="levelOfAmbition" value="4">
+            <label for="level4">Level 4</label>
+        </div>
+    </fieldset>
+</div>
+
+<div>
+    <svg id="svg" width="500" height="500"></svg>
+</div>
+</body>
+<script src="/chart.js"></script>
+</html>
