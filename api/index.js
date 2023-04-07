@@ -36,7 +36,7 @@ const years = [
 ];
 
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')})
 });
 app.get('/data', (req, res) => {
   const levelOfAmbition = url.parse(req.url, true).query.levelOfAmbition || "1";
